@@ -86,20 +86,34 @@ cd geng
 
 2. **Download Large Files (Models and Datasets)**
 
-The ML models and datasets are stored in GitHub Releases due to their size. Run the setup script to download them:
+⚠️ **Important**: The ML models and datasets are stored separately in GitHub Releases due to their large size (600+ MB total). You **must** download these files before running the application.
 
-**For Linux/Mac:**
+**Option A: Automatic Setup (Recommended)**
+
+Run the setup script to automatically download all required files:
+
+**Linux/Mac:**
 ```bash
 chmod +x setup-models.sh
 ./setup-models.sh
 ```
 
-**For Windows:**
+**Windows:**
 ```cmd
 setup-models.bat
 ```
 
-*Alternatively, you can manually download from the [Releases page](https://github.com/uselessbruh/geng/releases) and extract to the `backend/` directory.*
+**Option B: Manual Download**
+
+1. Go to the [Releases page](https://github.com/uselessbruh/geng/releases)
+2. Download the latest release files:
+   - `brain_mri_generator.h5` (264MB)
+   - `chest_xray_generator.h5` (264MB)
+   - `trained_synthesizers.zip` (7MB)
+   - `eicu-demo.zip` (49MB)
+3. Place the `.h5` files in the `backend/` directory
+4. Extract `trained_synthesizers.zip` to `backend/trained_synthesizers/`
+5. Extract `eicu-demo.zip` to `backend/eicu-demo/`
 
 3. **Backend Setup**
 
@@ -134,6 +148,42 @@ npm start
 ```
 
 The frontend will run on `http://localhost:3000`
+
+## 🔧 Troubleshooting
+
+### Large Files Not Found
+
+If you see errors about missing `.h5` files or synthesizers:
+
+1. **Verify files are downloaded**: Check that these directories exist:
+   - `backend/brain_mri_generator.h5`
+   - `backend/chest_xray_generator.h5`
+   - `backend/trained_synthesizers/` (with 33 .pkl files)
+   - `backend/eicu-demo/` (with CSV data files)
+
+2. **Re-run setup script**: If files are missing, run the setup script again:
+   ```bash
+   ./setup-models.sh  # Linux/Mac
+   setup-models.bat   # Windows
+   ```
+
+3. **Manual download**: If the script fails, download manually from [Releases](https://github.com/uselessbruh/geng/releases)
+
+### Network Issues
+
+If downloads fail due to network issues:
+- Check your internet connection
+- Try running the setup script again (it will resume downloads)
+- Use a VPN if you're behind a restrictive firewall
+- Download manually from the GitHub web interface
+
+### Permission Issues
+
+On Linux/Mac, if you get permission errors:
+```bash
+chmod +x setup-models.sh
+sudo ./setup-models.sh  # Only if needed
+```
 
 ## 📋 API Endpoints
 

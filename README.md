@@ -131,11 +131,10 @@ npm install
 
 ### Running the Application
 
-1. **Start the Backend Server**
+1. **Start the Backend Server from Root**
 
 ```bash
-cd backend
-python app.py
+python backend/app.py
 ```
 
 The backend will run on `http://localhost:6002`
@@ -310,3 +309,4 @@ For support, questions, or feature requests, please create an issue in the repos
 ---
 
 **Note**: This platform generates synthetic medical data for research and development purposes. It should not be used for actual patient care or clinical decision-making.
+

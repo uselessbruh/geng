@@ -1,0 +1,45 @@
+.butdiv{
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.generatebuttons {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center; 
+    align-items: center;
+    gap: 20px;
+    max-width: 80vw; 
+}
+
+.genbut {
+    background-color: #2c3e50;
+    padding: 40px; 
+    height: auto; 
+    width: 80%; 
+    max-width: 250px; 
+    text-align: center;
+    border-radius: 8px;
+    color: #ffffff;
+    font-size: 15px;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.genbut:hover {
+    background-color: #34495e;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.genbut:active {
+    background-color: #2c3e50;
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+

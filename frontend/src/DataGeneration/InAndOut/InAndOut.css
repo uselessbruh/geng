@@ -1,0 +1,192 @@
+.patientpage {
+    padding: 2rem;
+    max-width: 100%;
+    overflow-x: hidden;
+    background-color: #f5f5f5;
+}
+
+.patienttitle {
+    color: #2c3e50;
+    font-size: 1.8rem;
+    margin: 2rem 0;
+    padding-bottom: 0.5rem;
+    border-bottom: 3px solid #3498db;
+    text-align: left;
+}
+
+.table-section {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+    padding: 1rem;
+}
+
+.table-container {
+    overflow-x: auto;
+    margin: 1rem 0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    font-size: 0.9rem;
+}
+
+th {
+    background: #2c3e50;
+    color: white;
+    font-weight: 600;
+    padding: 12px;
+    text-align: left;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+td {
+    padding: 12px;
+    border-bottom: 1px solid #e1e1e1;
+    color: #333;
+}
+
+tr:hover {
+    background-color: #f8f9fa;
+}
+
+/* Scrollbar styling */
+.table-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.table-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.table-container::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+}
+
+.table-container::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* Download controls styling */
+.download-controls {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    border-top: 1px solid #e1e1e1;
+    margin-top: 1rem;
+}
+
+.control-group {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.control-group label {
+    color: #2c3e50;
+    font-size: 0.9rem;
+}
+
+.control-group input[type="number"] {
+    width: 80px;
+    padding: 0.3rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.control-group input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+}
+
+.download-button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.2s;
+}
+
+.download-button:hover {
+    background-color: #2980b9;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .patientpage {
+        padding: 1rem;
+    }
+    
+    .patienttitle {
+        font-size: 1.5rem;
+    }
+    
+    td, th {
+        padding: 8px;
+        font-size: 0.8rem;
+    }
+
+    .download-controls {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+.validation-select {
+    padding: 5px 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: white;
+    font-size: 14px;
+    min-width: 200px;
+    color: #2c3e50;
+}
+
+.validation-select:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 3px rgba(52, 152, 219, 0.3);
+}
+
+.input-with-warning {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.warning-message {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    color: #e74c3c;
+    font-size: 0.8rem;
+    margin-top: 4px;
+    white-space: nowrap;
+}
+
+.input-error {
+    border-color: #e74c3c !important;
+    background-color: #fdf3f2;
+}
+
+.input-error:focus {
+    box-shadow: 0 0 3px rgba(231, 76, 60, 0.3);
+    outline: none;
+}
